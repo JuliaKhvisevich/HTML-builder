@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 });
 
 rl.output.write('Hello! Enter the text to write to the file: ');
-writeableStream.write('Hello! Enter the text to write to the file: ');
+// writeableStream.write('Hello! Enter the text to write to the file: ');
 
 rl.on('line', (answer) => {
   if (answer.trim().toLowerCase() === 'exit') {
@@ -27,6 +27,6 @@ rl.on('line', (answer) => {
 
 rl.on('SIGINT', () => {
   console.log('You pressed Ctrl + C. Finishing the job...');
-  writeableStream.end('You pressed Ctrl + C. Finishing the job...');
+  // writeableStream.end('You pressed Ctrl + C. Finishing the job...');
   process.exit();
 });
